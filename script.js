@@ -6,6 +6,8 @@ const userName = document.querySelector('.user_name');
 const userRole = document.querySelector('.user_role');
 const userAbout = document.querySelector('.user_about');
 
+const slider = document.querySelector('.slider');
+
 const data = [
     {'imgSrc' : 'Media/user1.jpg',
     'userName' : 'Tom Buluchka',
@@ -28,6 +30,11 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 rightBtn.addEventListener('click',()=>{
     setData();
+    slider.classList.add('aniNext');
+    slider.addEventListener('animationend',()=>{
+        slider.classList.remove('aniNext');
+    });
+    
     if(counter === data.length-1) counter = 0;
     else counter++;
 });
@@ -35,6 +42,11 @@ rightBtn.addEventListener('click',()=>{
 
 leftBtn.addEventListener('click',()=>{
     setData();
+    slider.classList.add('aniPre');
+    slider.addEventListener('animationend',()=>{
+        slider.classList.remove('aniPre');
+    });
+
     if(counter === 0) counter = data.length-1;
     else counter--;
     
@@ -48,4 +60,6 @@ function setData(){
     userName.innerText = obj.userName;
     userRole.innerText = obj.userRole;
     userAbout.innerText = obj.userAbout;
+
+   
 }
