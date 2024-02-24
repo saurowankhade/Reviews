@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital@1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color : #bb7fff;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    background-color: rgba(240, 248, 255, 0.37);
+}
+
+main{
+    text-align: center;
+    /* height: 100svh; */
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.card{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+figure{
+    height: 100%;
+    /* margin: 20px; */
+    padding: 30px;
+    box-shadow: 10px 10px 10px 10px #d2d7d752;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 2px 0px 5px 0px var(--color);
+}
+figure p{
+    width: 500px;
+    font-weight: 400;
+    
+
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 4; /* number of lines to show */
+           line-clamp: 4;
+   -webkit-box-orient: vertical;
+}
+
+figure p,h2,i{
+    margin-top: 10px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+figure h2{
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;  
+}
+figure h4{
+    font-size: 16px;
+    font-weight: 540;
+    margin-top: 5px;
+    color: var(--color);
+}
+
+
+figure span i{
+    cursor: pointer;
+    font-size: 26px;
+    padding: 4px;
+    color: var(--color);
+}
+
+
+h1 {
+    display: inline-block;
+    padding-bottom: 20px;
+    position: relative;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+h1:before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 25%;
+    border-bottom: 3px solid var(--color);
+}
+
+
+
+@media (max-width:600px) {
+   figure{
+    width: 500px;
+   } 
+   figure p{
+    width: auto;
+    font-weight: 400;
+}
+}
+
+@media (max-width:550px) {
+
+    figure{
+     width: 300px;
+     margin-top: 20px;
+    } 
+    figure p{
+     width: auto;
+     font-weight: 400;
+    }
+ }
+
