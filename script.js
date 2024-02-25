@@ -83,5 +83,5 @@ function data1(){
         counter=0;
     }
 
-    setTimeout("data1()",3000);
+    setTimeout("data1()",5000);
 }
