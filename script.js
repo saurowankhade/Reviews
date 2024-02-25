@@ -60,6 +60,28 @@ function setData(){
     userName.innerText = obj.userName;
     userRole.innerText = obj.userRole;
     userAbout.innerText = obj.userAbout;
+}
 
-   
+    window.onload = data1;
+
+function data1(){
+
+    let obj = data[counter];
+    img.src = obj.imgSrc;
+    userName.innerText = obj.userName;
+    userRole.innerText = obj.userRole;
+    userAbout.innerText = obj.userAbout;
+
+    slider.classList.add('aniNext');
+    slider.addEventListener('animationend',()=>{
+        slider.classList.remove('aniNext');
+    });
+
+    if(counter<data.length-1){
+        counter++;
+    }else{
+        counter=0;
+    }
+
+    setTimeout("data1()",3000);
 }
